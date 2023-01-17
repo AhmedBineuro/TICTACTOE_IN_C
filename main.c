@@ -477,7 +477,7 @@ int main()
                 while (difficulty > 4 || difficulty < 1)
                 {
 
-                    printf("\nDifficulty (1-easy 4-hard)? (y/n)\n");
+                    printf("\nDifficulty (1-easy 4-hard)?\n");
                     gets(input);
                     difficulty = input[0] - 48;
                 }
