@@ -344,14 +344,30 @@ X| |
     int row = rand() % 3;
     srand(clock());
     int col = rand() % 3;
+    int trials = 100000;
     do
     {
         srand(clock());
         row = rand() % 3;
         srand(clock());
         col = rand() % 3;
-    } while (playSpace[row][col] != 0);
-    playSpace[row][col] = 2;
+        trials--;
+    } while (playSpace[row][col] != 0 && trials > 0);
+    if (trials == 0)
+    {
+        for (int i = 0; i < 3; i++)
+            for (int j = 0; j < 3; j++)
+            {
+                if (playSpace[i][j] == 0)
+                {
+                    playSpace[i][j] = 2;
+                    XTurn = true;
+                    return;
+                }
+            }
+    }
+    else
+        playSpace[row][col] = 2;
     XTurn = true;
     return;
 }
