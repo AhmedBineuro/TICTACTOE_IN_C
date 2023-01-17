@@ -379,17 +379,16 @@ void gameLoop()
             row = input[0] - 48;
             column = input[2] - 48;
         }
-        playSpace[row - 1][column - 1] = 1;
         XTurn = !XTurn;
         if (XTurn == true)
         {
+            playSpace[row - 1][column - 1] = 1;
         }
         else
         {
             playSpace[row - 1][column - 1] = 2;
         }
         checkState();
-        checkThreat();
         printf("\n===================================\n");
     }
 }
