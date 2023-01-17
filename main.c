@@ -333,7 +333,7 @@ X| |
     if (threat)
     {
         srand(clock());
-        if (rand() % 100 > AICHANCE)
+        if (rand() % 100 > 100 - AICHANCE)
         {
             playSpace[tRow][tCol] = 2;
             XTurn = true;
@@ -474,7 +474,7 @@ int main()
             else
             {
                 int difficulty = -1;
-                while (difficulty > 4 || difficulty < 1)
+                while (difficulty < 1)
                 {
 
                     printf("\nDifficulty? (1-easy 4-hard)\n");
