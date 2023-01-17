@@ -486,5 +486,6 @@ int main()
             resetPlaySpace();
         }
     }
+    system("CLS");
     return 0;
 }
