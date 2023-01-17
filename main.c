@@ -395,7 +395,8 @@ void gameLoop()
 }
 void gameLoopAI()
 {
-    XTurn = rand() % 1;
+    srand(clock());
+    XTurn = rand() % 2;
     char input[3];
     while (XWin == false && OWin == false)
     {
