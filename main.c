@@ -323,7 +323,7 @@ X| |
     if (potential)
     {
         srand(clock());
-        if (rand() % 100 > AICHANCE)
+        if (rand() % 100 > 100 - AICHANCE)
         {
             playSpace[pRow][pCol] = 2;
             XTurn = true;
